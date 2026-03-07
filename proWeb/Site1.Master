@@ -8,12 +8,14 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+    <body>
+        <form id="form1" runat="server">
+            <p>Luis Fernando Francisco Peña - 42234381X</p>
+            <div style="background-color:#2ABFBF; text-align:center; padding:20px;">
+                <h1 style="color:black;">HADA P3 - CURSO 2025/26</h1>
+            </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-        </div>
-    </form>
-</body>
+        </form>
+    </body>
 </html>
