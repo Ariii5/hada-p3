@@ -14,9 +14,9 @@ namespace library
         {
             this.constring = direccion;
         }
-        /* public bool Create(ENProduct en)
+         public bool Create(ENProduct en)
          {
              return false;
-         }*/
+         }
     }
 }
