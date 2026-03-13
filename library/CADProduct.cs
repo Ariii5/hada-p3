@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,9 @@ namespace library
     internal class CADProduct
     {
         private string constring;   //cadena a la base de datos
-        public CADProduct(string direccion)
+        public CADProduct()
         {
-            this.constring = direccion;
+            this.constring = ConfigurationManager.ConnectionStrings["HadaDB"].ToString(); ;
         }
          public bool Create(ENProduct en)
          {
