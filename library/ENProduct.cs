@@ -12,7 +12,7 @@ namespace library
         private string name;
         private int amount;
         private float price;
-        private int categoy;
+        private int category;
         private DateTime creationDate;
 
         public string Code

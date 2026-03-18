@@ -31,9 +31,10 @@ namespace library
                     cmd.Parameters.AddWithValue("@category", en.Category);
                     cmd.Parameters.AddWithValue("@creationDate", en.CreationDate);
                     conn.Open();
-                    cmd.ExecuteNonQuery();
+                    int rows = cmd.ExecuteNonQuery();
+                    return rows > 0;
                 }
-                return true;
+               
             }
             catch (SqlException ex)
             {
@@ -76,9 +77,10 @@ namespace library
                     SqlCommand cmd = new SqlCommand(comando, conn);
                     cmd.Parameters.AddWithValue("@code", en.Code);
                     conn.Open();
-                    cmd.ExecuteNonQuery();
+                    int rows = cmd.ExecuteNonQuery();
+                    return rows > 0;
                 }
-                return true;
+               
             }
             catch (SqlException ex)
             {
