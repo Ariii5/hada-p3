@@ -23,7 +23,7 @@ namespace library
         public string Name
         {
             get { return name; }
-            set { code = value; }
+            set { name = value; }
         }
         public int Amount
         {
