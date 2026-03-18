@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace library
 {
-    internal class ENProduct
+    public class ENProduct
     {
         private string code;
         private string name;
@@ -94,10 +94,10 @@ namespace library
             CADProduct cad = new CADProduct();
             return cad.ReadNext(this);
         }
-        public bool ReadPrevious()
+        public bool ReadPrev()
         {
             CADProduct cad = new CADProduct();
-            return cad.ReadPrevious(this);
+            return cad.ReadPrev(this);
         }
     }
 }
