@@ -1,52 +1,35 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="proWeb.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        #Text1 {
-            width: 268px;
-        }
-        #Text2 {
-            width: 268px;
-        }
-        #Text3 {
-            width: 120px;
-        }
-    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
-    <asp:TextBox ID="TextBox1" runat="server" Font-Size="XX-Large" Width="340px">Products management</asp:TextBox>
+    <h2>Products management</h2>
     <br />
-    <br />
-    <asp:TextBox ID="TextBox2" runat="server" Font-Size="Medium" Width="55px">Code</asp:TextBox>
-    <input id="Text1" type="text" />
-    <br />
-    <br />
-    <asp:TextBox ID="TextBox3" runat="server" Font-Size="Medium" Width="55px">Name</asp:TextBox>
-    <input id="Text2" type="text" />
-    <br />
-    <br />
-    <asp:TextBox ID="TextBox4" runat="server" Font-Size="Medium" Width="56px">Amount</asp:TextBox>
-    <input id="Text3" type="text" />
-    <br />
-    <br />
-    <asp:TextBox ID="TextBox5" runat="server" Font-Size="Medium" Width="78px">Category</asp:TextBox>
-    <asp:DropDownList ID="DropDownList1" runat="server">
-    </asp:DropDownList>
-    <br />
-    <br />
-    <asp:TextBox ID="TextBox6" runat="server" Font-Size="Medium" Width="53px">Price</asp:TextBox>
-    <input id="Text4" type="text" />
-    <br />
-    <br />
-    <asp:TextBox ID="TextBox7" runat="server" Font-Size="Medium" Width="109px">Creation Date</asp:TextBox>
-    <input id="Text5" type="text" />
-    <br />
-    <br />
-    <input id="Button1" type="button" value="Create" />
-    <input id="Button2" type="button" value="Update" />
-    <input id="Button3" type="button" value="Delete" />
-    <input id="Button4" type="button" value="Read" />
-    <input id="Button5" type="button" value="Read First" />
-    <input id="Button6" type="button" value="Read Prev" />
-    <input id="Button7" type="button" value="Read Next" />
+    <label>Code</label>
+    <asp:TextBox ID="tbCode" runat="server" Width="268px" />
+    <br /><br />
+    <label>Name</label>
+    <asp:TextBox ID="tbName" runat="server" Width="268px" />
+    <br /><br />
+    <label>Amount</label>
+    <asp:TextBox ID="tbAmount" runat="server" Width="120px" />
+    <br /><br />
+    <label>Category</label>
+    <asp:DropDownList ID="ddlCategory" runat="server" />
+    <br /><br />
+    <label>Price</label>
+    <asp:TextBox ID="tbPrice" runat="server" Width="120px" />
+    <br /><br />
+    <label>Creation Date</label>
+    <asp:TextBox ID="tbCreationDate" runat="server" Width="268px" />
+    <br /><br />
+    <asp:Button ID="btnCreate" runat="server" Text="Create" OnClick="btnCreate_Click" />
+    <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />
+    <asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />
+    <asp:Button ID="btnRead" runat="server" Text="Read" OnClick="btnRead_Click" />
+    <asp:Button ID="btnReadFirst" runat="server" Text="Read First" OnClick="btnReadFirst_Click" />
+    <asp:Button ID="btnReadPrev" runat="server" Text="Read Prev" OnClick="btnReadPrev_Click" />
+    <asp:Button ID="btnReadNext" runat="server" Text="Read Next" OnClick="btnReadNext_Click" />
+    <br /><br />
+    <asp:Label ID="lblMessage" runat="server" />
 </asp:Content>
