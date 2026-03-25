@@ -37,8 +37,8 @@ namespace library
         }
         public int Category
         {
-            get { return categoy; }
-            set { categoy = value; }
+            get { return category; }
+            set { category = value; }
         }
         public DateTime CreationDate
         {
