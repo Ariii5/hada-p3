@@ -19,19 +19,27 @@ It provides basic CRUD operations (Create, Read, Update, Delete) and a simple na
 - Database: SQL Server (script included to recreate database)  
 
 ## Setup Instructions
-1. **Database:**  
-   Run `DatabaseScript.sql` in your SQL Server to create the database and tables.  
-   *(If not using Database.mdf inside proWeb, remember to modify the connection string in Web.config.)*  
 
-2. **Open Project:**  
-   Open the solution in Visual Studio 2022.  
+### 1. Create Local Database
+1. Open the solution in **Visual Studio 2022**.  
+2. In **Solution Explorer**, right-click the `App_Data` folder → **Add → New Item → SQL Database**.  
+3. Name it `Database.mdf`.
 
-3. **Run Project:**  
-   Press F5 to launch in IIS Express.  
+### 2. Run Database Script
+1. Right-click `Database.mdf` in `App_Data` → **Open in Server Explorer → New Query**.  
+2. Paste the `DatabaseScript.sql` contents (tables & default categories).  
+3. Execute the script. This will create `Categories` and `Products` tables and insert default categories.
 
-4. **Use the App:**  
-   Fill out the product form and use the buttons to manage product entries.  
+### 3. Update Connection String (if necessary)
+Ensure your `Web.config` has a connection string like this:
 
+```xml
+<connectionStrings>
+  <add name="ProductsDB"
+       connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True"
+       providerName="System.Data.SqlClient" />
+</connectionStrings>
+```
 ## Author
 - Luis Fernando Francisco Peña – 42234381X  
 - Ariadna Miralles González – 20518810G
