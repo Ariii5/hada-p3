@@ -4,18 +4,121 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>HADA P3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .name-bar {
+            background-color: #222;
+            color: #ccc;
+            padding: 6px 16px;
+            font-size: 13px;
+        }
+
+        .header {
+            background-color: #2ABFBF;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header h1 {
+            color: floralwhite;
+            margin: 0;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .product-form {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px 40px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-form h2 {
+            text-align: center;
+            color: #2ABFBF;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .input-box {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .small-input {
+            width: 120px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background-color: #2ABFBF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background-color: #1f9999;
+        }
+
+        .lblMessage {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+            color: red;
+        }
+
+    </style>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-    <body>
-        <form id="form1" runat="server">
-            <p>Luis Fernando Francisco Peña - 42234381X; Ariadna Miralles González - 20518810G</p>
-            <div style="background-color:#2ABFBF; text-align:center; padding:20px;">
-                <h1 style="color:black;">HADA P3 - CURSO 2025/26</h1>
-            </div>
+<body>
+    <form id="form1" runat="server">
+        <div class="name-bar">Luis Fernando Francisco Peña - 42234381X &nbsp;|&nbsp; Ariadna Miralles González - 20518810G</div>
+        <div class="header">
+            <h1>HADA P3 - CURSO 2025/26</h1>
+        </div>
+        <div class="content">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-        </form>
-    </body>
+        </div>
+    </form>
+</body>
 </html>
