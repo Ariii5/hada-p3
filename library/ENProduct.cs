@@ -51,7 +51,7 @@ namespace library
             name = "";
             amount = 0;
             price = 0.0f;
-            categoy = 0;
+            category = 0;
             creationDate = DateTime.Now;
         }
         public ENProduct(string code, string name, int amount, float price, int category, DateTime creationDate)
@@ -60,7 +60,7 @@ namespace library
             this.name = name;
             this.amount = amount;
             this.price = price;
-            this.categoy = category;
+            this.category = category;
             this.creationDate = creationDate;
         }
 
