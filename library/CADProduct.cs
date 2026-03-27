@@ -62,7 +62,7 @@ namespace library
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Ha habido un errror respecto a la creación de producto. Error: {0}", ex.Message);
+                Console.WriteLine("Ha habido un error respecto a la creación de producto. Error: {0}", ex.Message);
                 return false;
             }
         }
@@ -84,13 +84,14 @@ namespace library
             {
                 using (SqlConnection conn = new SqlConnection(constring))
                 {
-                    string comando = "UPDATE Products set name=@name, price=@price, category=@category, amount=@amount where code=@code";
+                    string comando = "UPDATE Products set name=@name, price=@price, category=@category, amount=@amount, creationDate=@creationDate where code=@code";
                     SqlCommand cmd = new SqlCommand(comando, conn);
                     cmd.Parameters.AddWithValue("@name", en.Name);
                     cmd.Parameters.AddWithValue("@code", en.Code);
                     cmd.Parameters.AddWithValue("@amount", en.Amount);
                     cmd.Parameters.AddWithValue("@price", en.Price);
                     cmd.Parameters.AddWithValue("@category", en.Category);
+                    cmd.Parameters.AddWithValue("@creationDate", en.CreationDate);
                     conn.Open();
                     int rows = cmd.ExecuteNonQuery();
                     return rows > 0;
@@ -99,7 +100,7 @@ namespace library
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Ha habido un errror respecto a la actualización de producto. Error: {0}", ex.Message);
+                Console.WriteLine("Ha habido un error respecto a la actualización de producto. Error: {0}", ex.Message);
                 return false;
             }
         }
@@ -128,7 +129,7 @@ namespace library
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Ha habido un errror respecto a la eliminación del producto. Error: {0}", ex.Message);
+                Console.WriteLine("Ha habido un error respecto a la eliminación del producto. Error: {0}", ex.Message);
                 return false;
             }
         }
@@ -167,7 +168,7 @@ namespace library
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Ha habido un errror para leer la información del producto. Error: {0}", ex.Message);
+                Console.WriteLine("Ha habido un error para leer la información del producto. Error: {0}", ex.Message);
                 return false;
             }
         }
@@ -205,7 +206,7 @@ namespace library
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Ha habido un errror para leer la información del primer producto. Error: {0}", ex.Message);
+                Console.WriteLine("Ha habido un error para leer la información del primer producto. Error: {0}", ex.Message);
                 return false;
             }
         }
@@ -248,7 +249,7 @@ namespace library
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Ha habido un errror para leer la información del siguiente producto al escogido. Error: {0}", ex.Message);
+                Console.WriteLine("Ha habido un error para leer la información del siguiente producto al escogido. Error: {0}", ex.Message);
                 return false;
             }
         }
@@ -291,7 +292,7 @@ namespace library
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Ha habido un errror para leer la información del producto previo al escogido. Error: {0}", ex.Message);
+                Console.WriteLine("Ha habido un error para leer la información del producto previo al escogido. Error: {0}", ex.Message);
                 return false;
             }
         }
